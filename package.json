@@ -38,7 +38,9 @@
     "postbuild": "eslint --fix *.js src",
     "build": "rollup -c",
     "test": "jest test --coverage",
-    "changelog": "conventional-changelog -p vue-router-mp -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p vue-router-mp -i CHANGELOG.md -s",
+    "docs": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "object-equal": "^1.0.0",
@@ -47,6 +49,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
+    "@vuepress/theme-default": "^1.0.0-alpha.39",
     "babel-eslint": "^10.0.1",
     "conventional-changelog-cli": "^2.0.11",
     "eslint": "^5.14.1",
@@ -58,6 +61,7 @@
     "rollup": "^1.2.2",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.1"
+    "rollup-plugin-node-resolve": "^4.0.1",
+    "vuepress": "^1.0.0-alpha.39"
   }
 }
