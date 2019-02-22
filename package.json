@@ -15,7 +15,9 @@
     "wxapp",
     "wechat",
     "hook",
-    "interceptor"
+    "interceptor",
+    "beforeEach",
+    "afterEach"
   ],
   "repository": {
     "type": "git",

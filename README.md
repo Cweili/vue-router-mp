@@ -1,7 +1,5 @@
 # vue-router-mp
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Cweili/vue-router-mp.svg)](https://greenkeeper.io/)
-
 [![npm][badge-version]][npm]
 [![bundle size][badge-size]][bundlephobia]
 [![npm downloads][badge-downloads]][npm]
