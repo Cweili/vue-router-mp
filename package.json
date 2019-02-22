@@ -1,0 +1,61 @@
+{
+  "name": "vue-router-mp",
+  "version": "0.0.1",
+  "description": "mpvue 中使用的 vue-router 兼容路由，兼容大部分 vue-router API，含导航守卫、命名路由等",
+  "keywords": [
+    "mpvue",
+    "vue",
+    "vuejs",
+    "router",
+    "route",
+    "routes",
+    "miniprogram",
+    "wx",
+    "weapp",
+    "wxapp",
+    "wechat",
+    "hook",
+    "interceptor"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cweili/vue-router-mp.git"
+  },
+  "author": "Cweili",
+  "license": "MIT",
+  "homepage": "https://github.com/Cweili/vue-router-mp",
+  "bugs": {
+    "url": "https://github.com/Cweili/vue-router-mp/issues"
+  },
+  "main": "dist/vue-router-mp.cjs.js",
+  "module": "dist/vue-router-mp.esm.js",
+  "unpkg": "dist/vue-router-mp.js",
+  "jsdelivr": "dist/vue-router-mp.js",
+  "sideEffects": false,
+  "scripts": {
+    "postbuild": "eslint --fix *.js src",
+    "build": "rollup -c",
+    "test": "jest test --coverage",
+    "changelog": "conventional-changelog -p vue-router-mp -i CHANGELOG.md -s"
+  },
+  "dependencies": {
+    "object-equal": "^1.0.0",
+    "querystringify": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "conventional-changelog-cli": "^2.0.11",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-import-resolver-node": "^0.3.2",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "jest": "^24.1.0",
+    "rollup": "^1.2.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.1"
+  }
+}
