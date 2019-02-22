@@ -7,7 +7,7 @@
 
 
 [![github][badge-issues]][github]
-<!--[![travis][badge-build]][travis] -->
+[![travis][badge-build]][travis]
 <!-- [![coverage][badge-coverage]][codecov] -->
 
 
