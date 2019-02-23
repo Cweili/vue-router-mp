@@ -42,3 +42,6 @@ bower_components
 # IDE configs
 .editorconfig
 .idea
+
+# Docs
+docs
