@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/vue-router-mp/',
   locales: {
     '/': {
       lang: 'zh-CN',
