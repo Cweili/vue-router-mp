@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>嵌套路由 | Vue Router MP</title>
+    <meta name="description" content="mpvue 中使用的 vue-router 兼容路由">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.86bb5f76.css" as="style"><link rel="preload" href="/assets/js/app.56878826.js" as="script"><link rel="preload" href="/assets/js/2.eb47bc19.js" as="script"><link rel="preload" href="/assets/js/19.4f2c9bc9.js" as="script"><link rel="prefetch" href="/assets/js/10.89902a72.js"><link rel="prefetch" href="/assets/js/11.2ce1ebfc.js"><link rel="prefetch" href="/assets/js/12.fa421595.js"><link rel="prefetch" href="/assets/js/13.6bb58f98.js"><link rel="prefetch" href="/assets/js/14.e9eb5d99.js"><link rel="prefetch" href="/assets/js/15.3d960e84.js"><link rel="prefetch" href="/assets/js/16.aba5cb19.js"><link rel="prefetch" href="/assets/js/17.cc7f707a.js"><link rel="prefetch" href="/assets/js/18.a222b404.js"><link rel="prefetch" href="/assets/js/20.7cffd6a9.js"><link rel="prefetch" href="/assets/js/21.b2735f48.js"><link rel="prefetch" href="/assets/js/22.7b8ce268.js"><link rel="prefetch" href="/assets/js/23.099bb770.js"><link rel="prefetch" href="/assets/js/3.78bc0acc.js"><link rel="prefetch" href="/assets/js/4.d05a7897.js"><link rel="prefetch" href="/assets/js/5.773489d7.js"><link rel="prefetch" href="/assets/js/6.b398b764.js"><link rel="prefetch" href="/assets/js/7.a06b3d82.js"><link rel="prefetch" href="/assets/js/8.0d378380.js"><link rel="prefetch" href="/assets/js/9.c96ff796.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.86bb5f76.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Vue Router MP</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="/api/" class="nav-link">API 参考</a></div> <a href="https://github.com/Cweili/vue-router-mp" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">指南</a></div><div class="nav-item"><a href="/api/" class="nav-link">API 参考</a></div> <a href="https://github.com/Cweili/vue-router-mp" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/installation.html" class="sidebar-link">安装</a></li><li><a href="/" class="sidebar-link">介绍</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/" class="sidebar-link">起步</a></li><li><a href="/guide/essentials/named-routes.html" class="sidebar-link">命名路由</a></li><li><a href="/guide/essentials/navigation.html" class="sidebar-link">编程式的导航</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/advanced/navigation-guards.html" class="sidebar-link">导航守卫</a></li><li><a href="/guide/advanced/meta.html" class="sidebar-link">路由元信息</a></li><li><a href="/guide/advanced/data-fetching.html" class="sidebar-link">数据获取</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="content default"><h1 id="嵌套路由"><a href="#嵌套路由" aria-hidden="true" class="header-anchor">#</a> 嵌套路由</h1> <p>实际生活中的应用界面，通常由多层嵌套的组件组合而成。同样地，URL 中各段动态路径也按某种结构对应嵌套的各层组件，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>/user/foo/profile                     /user/foo/posts
++------------------+                  +-----------------+
+| User             |                  | User            |
+| +--------------+ |                  | +-------------+ |
+| | Profile      | |  +------------&gt;  | | Posts       | |
+| |              | |                  | |             | |
+| +--------------+ |                  | +-------------+ |
++------------------+                  +-----------------+
+</code></pre></div><p>借助 <code>vue-router</code>，使用嵌套路由配置，就可以很简单地表达这种关系。</p> <p>接着上节创建的 app：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> User <span class="token operator">=</span> <span class="token punctuation">{</span>
+  template<span class="token punctuation">:</span> <span class="token string">'&lt;div&gt;User {{ $route.params.id }}&lt;/div&gt;'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/user/:id'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> User <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>这里的 <code>&lt;router-view&gt;</code> 是最顶层的出口，渲染最高级路由匹配到的组件。同样地，一个被渲染组件同样可以包含自己的嵌套 <code>&lt;router-view&gt;</code>。例如，在 <code>User</code> 组件的模板添加一个 <code>&lt;router-view&gt;</code>：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> User <span class="token operator">=</span> <span class="token punctuation">{</span>
+  template<span class="token punctuation">:</span> <span class="token template-string"><span class="token string">`
+    &lt;div class=&quot;user&quot;&gt;
+      &lt;h2&gt;User {{ $route.params.id }}&lt;/h2&gt;
+      &lt;router-view&gt;&lt;/router-view&gt;
+    &lt;/div&gt;
+  `</span></span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>要在嵌套的出口中渲染组件，需要在 <code>VueRouter</code> 的参数中使用 <code>children</code> 配置：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">'/user/:id'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> User<span class="token punctuation">,</span>
+      children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token comment">// 当 /user/:id/profile 匹配成功，</span>
+          <span class="token comment">// UserProfile 会被渲染在 User 的 &lt;router-view&gt; 中</span>
+          path<span class="token punctuation">:</span> <span class="token string">'profile'</span><span class="token punctuation">,</span>
+          component<span class="token punctuation">:</span> UserProfile
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token comment">// 当 /user/:id/posts 匹配成功</span>
+          <span class="token comment">// UserPosts 会被渲染在 User 的 &lt;router-view&gt; 中</span>
+          path<span class="token punctuation">:</span> <span class="token string">'posts'</span><span class="token punctuation">,</span>
+          component<span class="token punctuation">:</span> UserPosts
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p><strong>要注意，以 <code>/</code> 开头的嵌套路径会被当作根路径。 这让你充分的使用嵌套组件而无须设置嵌套的路径。</strong></p> <p>你会发现，<code>children</code> 配置就是像 <code>routes</code> 配置一样的路由配置数组，所以呢，你可以嵌套多层路由。</p> <p>此时，基于上面的配置，当你访问 <code>/user/foo</code> 时，<code>User</code> 的出口是不会渲染任何东西，这是因为没有匹配到合适的子路由。如果你想要渲染点什么，可以提供一个 空的 子路由：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> <span class="token string">'/user/:id'</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> User<span class="token punctuation">,</span>
+      children<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">// 当 /user/:id 匹配成功，</span>
+        <span class="token comment">// UserHome 会被渲染在 User 的 &lt;router-view&gt; 中</span>
+        <span class="token punctuation">{</span> path<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span> component<span class="token punctuation">:</span> UserHome <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+        <span class="token comment">// ...其他子路由</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>提供以上案例的可运行代码请<a href="https://jsfiddle.net/yyx990803/L7hscd8h/" target="_blank" rel="noopener noreferrer">移步这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.56878826.js" defer></script><script src="/assets/js/2.eb47bc19.js" defer></script><script src="/assets/js/19.4f2c9bc9.js" defer></script>
+  </body>
+</html>

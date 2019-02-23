@@ -1,0 +1,13 @@
+# redirect old urls to root
+
+/en/essentials/getting-started.html /guide/
+/en/essentials/* /guide/essentials/:splat
+/en/advanced/* /guide/advanced/:splat
+/en/api/* /api/
+/en/* /:splat
+
+/zh-cn/essentials/getting-started.html /guide/
+/zh-cn/essentials/* /guide/essentials/:splat
+/zh-cn/advanced/* /guide/advanced/:splat
+/zh-cn/api/* /api/
+/zh-cn/* /:splat
