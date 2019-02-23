@@ -73,7 +73,7 @@ router.push = (location, onComplete, onAbort) => {
 router.replace = (location, onComplete, onAbort) => {
   location = locationObj(location);
   location.replace = true;
-  push(router, location, onComplete, onAbort);
+  return push(router, location, onComplete, onAbort);
 };
 
 router.go = go;

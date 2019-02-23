@@ -2,8 +2,8 @@ module.exports = {
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'Vue Router',
-      description: 'Vue.js 官方的路由管理器。'
+      title: 'Vue Router MP',
+      description: 'mpvue 中使用的 vue-router 兼容路由'
     },
   },
   serviceWorker: true,
@@ -34,14 +34,14 @@ module.exports = {
             collapsable: false,
             children: [
               '/guide/',
-              '/guide/essentials/dynamic-matching.md',
-              '/guide/essentials/nested-routes.md',
-              '/guide/essentials/navigation.md',
+              // '/guide/essentials/dynamic-matching.md',
+              // '/guide/essentials/nested-routes.md',
               '/guide/essentials/named-routes.md',
-              '/guide/essentials/named-views.md',
-              '/guide/essentials/redirect-and-alias.md',
-              '/guide/essentials/passing-props.md',
-              '/guide/essentials/history-mode.md'
+              '/guide/essentials/navigation.md',
+              // '/guide/essentials/named-views.md',
+              // '/guide/essentials/redirect-and-alias.md',
+              // '/guide/essentials/passing-props.md',
+              // '/guide/essentials/history-mode.md'
             ]
           },
           {
@@ -50,10 +50,10 @@ module.exports = {
             children: [
               '/guide/advanced/navigation-guards.md',
               '/guide/advanced/meta.md',
-              '/guide/advanced/transitions.md',
+              // '/guide/advanced/transitions.md',
               '/guide/advanced/data-fetching.md',
-              '/guide/advanced/scroll-behavior.md',
-              '/guide/advanced/lazy-loading.md'
+              // '/guide/advanced/scroll-behavior.md',
+              // '/guide/advanced/lazy-loading.md'
             ]
           }
         ]

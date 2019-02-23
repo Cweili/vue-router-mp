@@ -11,7 +11,14 @@
 <!-- [![coverage][badge-coverage]][codecov] -->
 
 
-mpvue 中使用的 vue-router 兼容路由，兼容大部分 vue-router API，含导航守卫、命名路由等。
+vue-router-mp 是在 [mpvue](http://mpvue.com/) 中使用的兼容 [vue-router](https://router.vuejs.org/zh/) 的路由管理器，兼容常用大部分 vue-router 的 API。
+
+支持的特性有：
+
+- 编程式的导航
+- 命名路由
+- 导航守卫
+- 路由元信息
 
 ## 安装
 
@@ -21,28 +28,37 @@ mpvue 中使用的 vue-router 兼容路由，兼容大部分 vue-router API，�
 npm install vue-router-mp --save
 ```
 
-或者 [下载源码](https://cdn.jsdelivr.net/npm/vue-router-mp) 并复制到你的工程。
+### 直接下载
+
+[下载源码](https://cdn.jsdelivr.net/npm/vue-router-mp/dist/vue-router-mp.js) 并复制到你的工程。
 
 ### 小程序中引入
 
 ```js
-import VueRouter from 'vue-router-mp';
+import Vue from 'vue'
+import VueRouter from 'vue-router-mp'
 
-// or
+// 或
 
-const VueRouter = require('vue-router-mp');
+const Vue = require('vue')
+const VueRouter = require('vue-router-mp')
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 ```
 
 ## 起步
+
+由于在小程序中，页面路径是由工程源码的目录结构决定，因此相比 vue-router，不需要再指定路径的组件。
 
 ```js
 // 1. 定义路由
 // 此处由于小程序页面路径与源码一一对应，故无需配置组件
 const routes = [
   { path: '/pages/foo' },
-  { path: '/pages/bar' }
+  {
+    path: '/pages/bar',
+    isTab: true // 标志当前路由是一个 Tab
+  }
 ]
 
 // 2. 创建 router 实例，然后传 `routes` 配置
@@ -50,9 +66,11 @@ const routes = [
 const router = new VueRouter({
   routes // (缩写) 相当于 routes: routes
 })
+
+// 现在，应用已经启动了！
 ```
 
-通过注入路由器，我们可以在任何组件内通过 this.$router 访问路由器，也可以通过 this.$route 访问当前路由：
+通过注入路由器，我们可以在任何组件内通过 `this.$router` 访问路由器，也可以通过 `this.$route` 访问当前路由：
 
 ```js
 export default {

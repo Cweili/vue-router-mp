@@ -6,26 +6,17 @@
 const router = new VueRouter({
   routes: [
     {
-      path: '/user/:userId',
-      name: 'user',
-      component: User
+      path: '/pages/user',
+      name: 'user'
     }
   ]
 })
 ```
 
-要链接到一个命名路由，可以给 `router-link` 的 `to` 属性传一个对象：
-
-``` html
-<router-link :to="{ name: 'user', params: { userId: 123 }}">User</router-link>
-```
-
-这跟代码调用 `router.push()` 是一回事：
-
 ``` js
-router.push({ name: 'user', params: { userId: 123 }})
+router.push({ name: 'user', query: { userId: 123 }})
 ```
 
-这两种方式都会把路由导航到 `/user/123` 路径。
+会把路由导航到 `/pages/user?userId=123` 路径。
 
-完整的例子请[移步这里](https://github.com/vuejs/vue-router/blob/next/examples/named-routes/app.js)。
+> 对应 [vue-router 文档](https://router.vuejs.org/zh/guide/essentials/named-routes.html)。
