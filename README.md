@@ -20,6 +20,8 @@ vue-router-mp 是在 [mpvue](http://mpvue.com/) 中使用的兼容 [vue-router](
 - 导航守卫
 - 路由元信息
 
+请阅读 [完整文档][homepage]。
+
 ## 安装
 
 ### NPM
@@ -83,6 +85,10 @@ export default {
   }
 }
 ```
+
+请阅读 [完整文档][homepage]。
+
+[homepage]: https://cweili.gitee.io/vue-router-mp/
 
 [badge-version]: https://img.shields.io/npm/v/vue-router-mp.svg
 [badge-downloads]: https://img.shields.io/npm/dt/vue-router-mp.svg
