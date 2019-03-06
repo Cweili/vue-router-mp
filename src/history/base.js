@@ -25,8 +25,12 @@ export function transitionTo(
   }
   const abort = (err) => {
     if (isError(err)) {
-      warn(false, 'uncaught error during route navigation:');
-      console.error(err);
+      if (router.errorCbs.length) {
+        router.errorCbs.forEach((cb) => { cb(err); });
+      } else {
+        warn(false, 'uncaught error during route navigation:');
+        console.error(err);
+      }
     }
     onAbort(err);
   };

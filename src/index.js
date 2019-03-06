@@ -47,8 +47,11 @@ function locationObj(location) {
 
 const pathMap = {};
 const nameMap = {};
+
 const beforeHooks = [];
 const afterHooks = [];
+
+const errorCbs = [];
 
 function router({
   routes,
@@ -65,6 +68,9 @@ router.beforeHooks = beforeHooks;
 router.afterHooks = afterHooks;
 router.beforeEach = fn => registerHook(beforeHooks, fn);
 router.afterEach = fn => registerHook(afterHooks, fn);
+
+router.errorCbs = errorCbs;
+router.onError = fn => registerHook(errorCbs, fn);
 
 router.push = (location, onComplete, onAbort) => {
   location = locationObj(location);
