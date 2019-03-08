@@ -1,6 +1,6 @@
 {
   "name": "vue-router-mp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "mpvue 中使用的 vue-router 兼容路由，兼容大部分 vue-router API，含导航守卫、命名路由等",
   "keywords": [
     "mpvue",
