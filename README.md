@@ -58,8 +58,9 @@ Vue.use(VueRouter)
 const routes = [
   { path: '/pages/foo' },
   {
+    name: 'bar', // 命名路由
     path: '/pages/bar',
-    isTab: true // 标志当前路由是一个 Tab
+    isTab: true // 标记当前路由是一个 Tab
   }
 ]
 
