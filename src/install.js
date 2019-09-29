@@ -6,7 +6,7 @@ export default router => (Vue) => {
     onShow() {
       const app = router.app = this.$root;
       const { $mp } = app;
-      if ($mp) {
+      if ($mp && $mp.mpType === 'page') {
         const { currentRoute } = router;
         const {
           query,
