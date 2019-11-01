@@ -1,7 +1,10 @@
 import eq from 'object-equal';
+import throttle from 'async-throttle-cache';
 import { transitionTo } from './history/base';
 
-export default router => (Vue) => {
+const t = throttle(transitionTo, 50);
+
+export default (router) => (Vue) => {
   Vue.mixin({
     onShow() {
       const app = router.app = this.$root;
@@ -18,7 +21,7 @@ export default router => (Vue) => {
             route = router.base + route;
           }
           if (currentRoute.path !== route || !eq(currentRoute.query, query)) {
-            transitionTo(router, {
+            t(router, {
               path: route,
               query,
             });

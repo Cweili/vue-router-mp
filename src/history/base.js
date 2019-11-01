@@ -19,7 +19,6 @@ export function transitionTo(
   }
   const { currentRoute } = router;
   if (currentRoute && route.fullPath === currentRoute.fullPath) {
-    warn(false, 'route is not changed');
     onAbort();
     return;
   }

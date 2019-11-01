@@ -66,11 +66,11 @@ router.currentRoute = createRoute({});
 
 router.beforeHooks = beforeHooks;
 router.afterHooks = afterHooks;
-router.beforeEach = fn => registerHook(beforeHooks, fn);
-router.afterEach = fn => registerHook(afterHooks, fn);
+router.beforeEach = (fn) => registerHook(beforeHooks, fn);
+router.afterEach = (fn) => registerHook(afterHooks, fn);
 
 router.errorCbs = errorCbs;
-router.onError = fn => registerHook(errorCbs, fn);
+router.onError = (fn) => registerHook(errorCbs, fn);
 
 router.push = (location, onComplete, onAbort) => {
   location = locationObj(location);
@@ -110,15 +110,16 @@ router.match = (location) => {
   } else if (path) {
     const parsed = parse(path);
     p = parsed.path;
-    q = Object.assign({}, parsed.query, query);
+    q = { ...parsed.query, ...query };
     matched = pathMap[p];
   }
   warn(matched, 'Can\'t match any router');
-  return createRoute(matched, Object.assign({}, location, {
+  return createRoute(matched, {
+    ...location,
     name,
     path: p,
     query: q,
-  }));
+  });
 };
 
 router.install = install(router);
