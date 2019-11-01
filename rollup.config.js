@@ -29,6 +29,7 @@ export default [
       },
     ],
     external: [
+      'async-throttle-cache',
       'object-equal',
       'querystringify',
     ],
