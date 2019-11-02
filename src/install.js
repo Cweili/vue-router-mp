@@ -2,7 +2,7 @@ import eq from 'object-equal';
 import throttle from 'async-throttle-cache';
 import { transitionTo } from './history/base';
 
-const t = throttle(transitionTo, 50);
+const t = throttle((...args) => Promise.resolve(transitionTo(...args)), 50);
 
 export default (router) => (Vue) => {
   Vue.mixin({
