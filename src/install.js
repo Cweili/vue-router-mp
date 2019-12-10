@@ -1,8 +1,15 @@
+/* globals wx */
+
 import eq from 'object-equal';
 import throttle from 'async-throttle-cache';
 import { transitionTo } from './history/base';
 
 const t = throttle((...args) => Promise.resolve(transitionTo(...args)), 50);
+let appHide;
+
+wx.onAppHide(() => {
+  appHide = true;
+});
 
 export default (router) => (Vue) => {
   Vue.mixin({
@@ -10,6 +17,7 @@ export default (router) => (Vue) => {
       const app = router.app = this.$root;
       const { $mp } = app;
       if ($mp && $mp.mpType === 'page') {
+        appHide = false;
         const { currentRoute } = router;
         const {
           query,
@@ -27,6 +35,13 @@ export default (router) => (Vue) => {
             });
           }
         }
+      }
+    },
+
+    onUnload() {
+      if (appHide) {
+        appHide = false;
+        router.currentRoute = {};
       }
     },
   });
