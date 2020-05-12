@@ -104,7 +104,7 @@ export default {
 [badge-issues]: https://img.shields.io/github/issues/Cweili/vue-router-mp.svg
 [github]: https://github.com/Cweili/vue-router-mp
 
-[badge-build]: https://img.shields.io/travis/com/vue-router-mp/master.svg
+[badge-build]: https://img.shields.io/travis/com/Cweili/vue-router-mp/master.svg
 [travis]: https://travis-ci.com/Cweili/vue-router-mp
 
 [badge-coverage]: https://img.shields.io/codecov/c/github/Cweili/vue-router-mp.svg
