@@ -7,8 +7,8 @@
 
 
 [![github][badge-issues]][github]
-[![travis][badge-build]][travis]
-<!-- [![coverage][badge-coverage]][codecov] -->
+[![travis][badge-build]][workflows]
+<!-- [![coverage][badge-coverage]][coveralls] -->
 
 
 vue-router-mp 是在 [mpvue](http://mpvue.com/) 中使用的兼容 [vue-router](https://router.vuejs.org/zh/) 的路由管理器，兼容常用大部分 vue-router 的 API。
@@ -104,8 +104,8 @@ export default {
 [badge-issues]: https://img.shields.io/github/issues/Cweili/vue-router-mp.svg
 [github]: https://github.com/Cweili/vue-router-mp
 
-[badge-build]: https://img.shields.io/travis/com/Cweili/vue-router-mp/master.svg
-[travis]: https://travis-ci.com/Cweili/vue-router-mp
+[badge-build]: https://img.shields.io/github/workflow/status/Cweili/vue-router-mp/ci/master
+[workflows]: https://github.com/Cweili/vue-router-mp/actions/workflows/ci.yml?query=branch%3Amaster
 
-[badge-coverage]: https://img.shields.io/codecov/c/github/Cweili/vue-router-mp.svg
-[codecov]: https://codecov.io/gh/Cweili/vue-router-mp
+[badge-coverage]: https://img.shields.io/coveralls/github/Cweili/vue-router-mp/master.svg
+[coveralls]: https://coveralls.io/github/Cweili/vue-router-mp?branch=master
