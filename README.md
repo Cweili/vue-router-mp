@@ -7,7 +7,7 @@
 
 
 [![github][badge-issues]][github]
-[![travis][badge-build]][workflows]
+[![build][badge-build]][workflows]
 <!-- [![coverage][badge-coverage]][coveralls] -->
 
 
